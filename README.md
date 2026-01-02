@@ -207,32 +207,32 @@ npm run report:full
 
 Test Cases incluidos:
 - TC001 - Flujo completo de compra exitoso
-- Pasos automatizados:
-Accede a la página principal de DemoBlaze.
-Selecciona el producto Samsung Galaxy S6 y lo agrega al carrito.
-Regresa al Home y agrega el producto Nokia Lumia 1520.
-Navega al carrito de compras.
-Verifica que ambos productos estén presentes en el carrito.
-Valida que el total de la compra sea mayor a cero.
-Inicia el proceso de compra mediante el botón Place Order.
-Completa el formulario de compra con datos válidos.
-Confirma la compra.
+Pasos automatizados:
+-Accede a la página principal de DemoBlaze.
+-Selecciona el producto Samsung Galaxy S6 y lo agrega al carrito.
+-Regresa al Home y agrega el producto Nokia Lumia 1520.
+-Navega al carrito de compras.
+-Verifica que ambos productos estén presentes en el carrito.
+-Valida que el total de la compra sea mayor a cero.
+-Inicia el proceso de compra mediante el botón Place Order.
+-Completa el formulario de compra con datos válidos.
+-Confirma la compra.
 
 - TC002 - Validación de cálculo del total
-- Pasos automatizados:
-Agrega dos productos diferentes al carrito.
-Accede a la vista del carrito.
-Obtiene dinámicamente los precios de cada producto.
-Calcula el total esperado.
-Compara el total calculado con el total mostrado en la interfaz.
+Pasos automatizados:
+-Agrega dos productos diferentes al carrito.
+-Accede a la vista del carrito.
+-Obtiene dinámicamente los precios de cada producto.
+-Calcula el total esperado.
+-Compara el total calculado con el total mostrado en la interfaz.
 
 - TC003 - Eliminar productos del carrito
-- Pasos automatizados:
-Agrega dos productos al carrito.
-Accede al carrito de compras.
-Verifica que existan dos productos.
-Elimina uno de los productos.
-Verifica que el carrito se actualice.
+Pasos automatizados:
+-Agrega dos productos al carrito.
+-Accede al carrito de compras.
+-Verifica que existan dos productos.
+-Elimina uno de los productos.
+-Verifica que el carrito se actualice.
 ---
 
 ### EJERCICIO 2 - PRUEBAS DE API (api-tests.cy.js):
