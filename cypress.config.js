@@ -23,9 +23,11 @@ module.exports = defineConfig({
     reporterOptions: {
       reportDir: 'cypress/reports',
       overwrite: false,
-      html: true,
+      html: false,
       json: true,
       charts: true,
+      timestamp: 'mmddyyyy_HHMMss',
+      reportFilename: 'mochawesome',
       reportTitle: 'Reporte de Pruebas - DemoBlaze',
       reportPageTitle: 'Resultados de Pruebas QA'
     },
