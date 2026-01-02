@@ -42,6 +42,16 @@ examen-qa-demoblaze/
 └── conclusiones.txt               -> Hallazgos y conclusiones
 ```
 
+### Video de Ejecución de Tests
+
+## DEMOSTRACIÓN
+
+Haz clic en el enlace para ver la demostración completa de como instalar y ejecutar los test:
+
+**<a href="https://drive.google.com/file/d/1_3igMcFF6k_yQWMA5uQoCaXYEN2uGvlW/view?usp=drive_link" target="_blank">▶️ Ver video completo</a>**
+
+---
+> **Nota:** Este video es privado y estará disponible hasta su revisión.
 ---
 
 ## INSTRUCCIONES DE INSTALACIÓN:
@@ -77,18 +87,6 @@ npx cypress verify
 ---
 
 ## INSTRUCCIONES DE EJECUCIÓN:
-
-
-### Video de Ejecución de Tests
-
-## DEMOSTRACIÓN
-
-Haz clic en el enlace para ver la demostración completa:
-
-**<a href="https://drive.google.com/file/d/1_3igMcFF6k_yQWMA5uQoCaXYEN2uGvlW/view?usp=drive_link" target="_blank">▶️ Ver video completo</a>**
-
----
-> **Nota:** Este video es privado y estará disponible hasta su revisión.
 
 RECOMENDACION: EJECUTAR PASO 1 - PASO 2 Y PASO 7
 
