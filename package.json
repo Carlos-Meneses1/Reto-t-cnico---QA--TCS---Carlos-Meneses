@@ -14,7 +14,7 @@
     "test:edge": "cypress run --browser edge",
     "open": "cypress open",
     "verify": "cypress verify",
-    "report:merge": "mochawesome-merge cypress/reports/*.json > cypress/reports/merged-report.json",
+    "report:merge": "mochawesome-merge cypress/reports/mochawesome*.json -o cypress/reports/merged-report.json",
     "report:generate": "marge cypress/reports/merged-report.json --reportDir cypress/reports/html --inline",
     "report:full": "npm run test && npm run report:merge && npm run report:generate"
   },
