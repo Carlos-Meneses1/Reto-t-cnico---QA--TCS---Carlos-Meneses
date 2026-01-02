@@ -78,6 +78,11 @@ npx cypress verify
 
 ## INSTRUCCIONES DE EJECUCIÓN:
 
+
+### Video de Demostración y Ejecución de Tests
+
+[▶️ Ver video de demostración](./Como-realizar-losTEST.mp4)
+
 RECOMENDACION: EJECUTAR PASO 1 - PASO 2 Y PASO 7
 
 ### OPCIÓN 1: EJECUTAR TODAS LAS PRUEBAS (Modo Headless)
@@ -322,6 +327,3 @@ npm run test:api         # Solo pruebas API
 npm run report:full      # Generar reporte HTML
 ```
 
-==========================================
-FIN DE LAS INSTRUCCIONES
-==========================================
