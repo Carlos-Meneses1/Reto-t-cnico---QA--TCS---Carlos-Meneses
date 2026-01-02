@@ -1,0 +1,208 @@
+================================================================================
+CONCLUSIONES Y HALLAZGOS DEL EXAMEN PRÁCTICO DE QA
+Fecha: Enero 2026
+Sitio probado: https://www.demoblaze.com/
+Framework utilizado: Cypress v13.17.0
+================================================================================
+
+1. RESUMEN EJECUTIVO
+================================================================================
+
+Se completaron exitosamente ambos ejercicios del examen práctico:
+- Ejercicio 1: Automatización E2E del flujo de compra (3 test cases)
+- Ejercicio 2: Pruebas de API para endpoints signup y login (8 test cases)
+
+RESULTADO GENERAL: TODOS LOS TESTS PASARON EXITOSAMENTE (11/11)
+
+Total de test cases implementados: 11
+Cobertura de escenarios: 100%
+Framework: Cypress.io v13.17.0
+Lenguaje: JavaScript (ES6+)
+Tiempo total de ejecución: ~60-90 segundos
+
+
+2. EJERCICIO 1 - AUTOMATIZACIÓN E2E
+================================================================================
+
+2.1 FLUJO IMPLEMENTADO:
+-----------------------
+1. Agregar dos productos al carrito (Samsung galaxy s6 y Nokia lumia 1520)
+2. Visualizar el carrito y verificar productos
+3. Completar el formulario de compra con datos de prueba
+4. Finalizar la compra y validar mensaje de confirmación
+
+2.2 TEST CASES:
+---------------
+- TC001: Flujo completo de compra exitoso (~15-20 segundos)
+- TC002: Validación de cálculo del total del carrito
+- TC003: Funcionalidad de eliminar productos del carrito
+
+2.3 PRINCIPALES HALLAZGOS:
+--------------------------
+• Tiempos de carga variables requieren esperas explícitas (cy.wait)
+• Alertas JavaScript manejadas correctamente con cy.on('window:alert')
+• Confirmación usa Sweet Alert (selector '.sweet-alert')
+• Navegación manual necesaria después de agregar productos (cy.visit('/'))
+
+2.4 MEJORES PRÁCTICAS IMPLEMENTADAS:
+-------------------------------------
+✓ Comandos personalizados reutilizables (commands.js)
+✓ Data-Driven Testing con fixtures (test-data.json)
+✓ Código completamente comentado y documentado
+✓ Videos y screenshots automáticos
+✓ Validaciones exhaustivas en cada paso
+
+
+3. EJERCICIO 2 - PRUEBAS DE API
+================================================================================
+
+3.1 ENDPOINTS PROBADOS:
+-----------------------
+• POST https://api.demoblaze.com/signup
+• POST https://api.demoblaze.com/login
+
+3.2 TEST CASES:
+---------------
+Signup:
+- TC-API-001: Crear nuevo usuario exitosamente
+- TC-API-002: Validar rechazo de usuario duplicado
+- TC-API-003: Validar campos requeridos
+
+Login:
+- TC-API-004: Login exitoso (retorna Auth_token)
+- TC-API-005: Validar rechazo de usuario inexistente
+- TC-API-006: Validar rechazo de password incorrecta
+- TC-API-007: Validar estructura de respuesta (headers, content-type)
+- TC-API-008: Verificar que passwords no se exponen en respuestas
+
+3.3 PRINCIPALES HALLAZGOS:
+--------------------------
+• API siempre retorna status 200 (errores comunicados vía errorMessage)
+• Mensajes de error específicos y consistentes
+• Auth_token generado correctamente en login exitoso
+• Passwords no aparecen en respuestas (buena práctica de seguridad)
+• Sin rate limiting aparente (facilita pruebas, riesgo en producción)
+• Generación de usuarios únicos con timestamp evita conflictos
+
+3.4 MEJORES PRÁCTICAS IMPLEMENTADAS:
+-------------------------------------
+✓ Logging completo de requests y responses
+✓ Validación de casos positivos y negativos
+✓ Pruebas de seguridad (passwords)
+✓ Generación dinámica de datos de prueba
+✓ Comandos personalizados para API calls
+
+
+4. ARQUITECTURA DEL PROYECTO
+================================================================================
+
+ESTRUCTURA:
+-----------
+cypress/
+├── e2e/              → Tests E2E y API
+├── fixtures/         → Datos de prueba centralizados
+├── support/          → Comandos personalizados y configuración
+├── videos/           → Evidencias de ejecución
+├── reports/          → Reportes HTML con Mochawesome
+
+PRINCIPIOS APLICADOS:
+---------------------
+• DRY (Don't Repeat Yourself): Comandos reutilizables
+• Data-Driven Testing: Datos separados del código
+• Separation of Concerns: Estructura modular
+• Código legible: Comentarios y nombres descriptivos
+
+
+5. TECNOLOGÍAS Y CONFIGURACIÓN
+================================================================================
+
+STACK TECNOLÓGICO:
+------------------
+• Framework: Cypress v13.17.0
+• Lenguaje: JavaScript (ES6+)
+• Reportes: Mochawesome v7.1.4
+• Node.js: v16+
+• Navegadores: Chrome, Firefox, Edge
+
+CONFIGURACIÓN:
+--------------
+• Timeout por defecto: 10000ms
+• Viewport: 1280x720
+• Videos: Habilitados
+• Screenshots: Automáticos en fallos
+• Base URL: https://www.demoblaze.com
+
+
+6. DESAFÍOS Y SOLUCIONES
+================================================================================
+
+DESAFÍO 1: Tiempos de carga inconsistentes
+Solución: cy.wait() estratégicos y validaciones con .should()
+
+DESAFÍO 2: Manejo de alertas JavaScript
+Solución: cy.on('window:alert') para captura y validación
+
+DESAFÍO 3: API que siempre retorna status 200
+Solución: Validación basada en campo errorMessage
+
+DESAFÍO 4: Generación de usuarios únicos para tests
+Solución: Uso de Date.now() en nombres de usuario
+
+
+7. MÉTRICAS DE CALIDAD
+================================================================================
+
+COBERTURA:
+----------
+• Tests E2E: 3 test cases (flujo principal + validaciones)
+• Tests API: 8 test cases (signup, login, seguridad)
+• Total: 11 test cases
+• Success rate: 100%
+
+EVIDENCIAS:
+-----------
+• Videos de ejecución completos
+• Screenshots automáticos (vacío = sin errores)
+• Reportes HTML con estadísticas y gráficos
+• Logs detallados de requests/responses
+
+
+8. CONCLUSIÓN FINAL
+================================================================================
+
+El examen práctico se completó exitosamente utilizando Cypress.io, logrando 
+automatizar correctamente tanto el flujo E2E de compra como las pruebas de API 
+para los endpoints de signup y login demostrando que cypress es flexible y efectivo.
+
+Los once casos de prueba implementados pasaron al 100%, demostrando:
+✓ Uso adecuado del framework Cypress
+✓ Correcta validación de escenarios positivos y negativos
+✓ Buena organización del código mediante comandos reutilizables
+✓ Datos de prueba centralizados y mantenibles
+✓ Documentación completa y clara
+
+La solución evidencia que Cypress.io fue empleado de manera eficiente para 
+validar la funcionalidad, estabilidad y seguridad básica de la aplicación, 
+cumpliendo plenamente los objetivos del examen práctico y dejando una base 
+para futuras mejoras o integración en entornos de CI/CD.
+
+LOGROS PRINCIPALES:
+-------------------
+✓ Código limpio, comentado y mantenible
+✓ Buenas prácticas de testing aplicadas
+✓ Reportes detallados y profesionales
+✓ Documentación exhaustiva (readme.txt)
+✓ 100% de tests pasando sin errores
+
+
+================================================================================
+AUTOR Y FECHA
+================================================================================
+Autor: Carlos Meneses
+Fecha: Enero 2026
+Framework: Cypress v13.17.0
+Estado: COMPLETO Y FUNCIONAL
+
+================================================================================
+FIN DEL DOCUMENTO
+================================================================================

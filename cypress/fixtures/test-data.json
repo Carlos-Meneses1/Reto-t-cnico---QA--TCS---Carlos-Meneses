@@ -1,0 +1,32 @@
+{
+  "purchase": {
+    "name": "Carlos Meneses",
+    "country": "Ecuador",
+    "city": "Quito",
+    "creditCard": "4532123456789012",
+    "month": "12",
+    "year": "2025"
+  },
+  "users": {
+    "newUser": {
+      "username": "testuser_${timestamp}",
+      "password": "TestPassword123!"
+    },
+    "existingUser": {
+      "username": "existing_user_test",
+      "password": "ExistingPass123!"
+    },
+    "validUser": {
+      "username": "valid_test_user",
+      "password": "ValidPass123!"
+    },
+    "invalidUser": {
+      "username": "invalid_user_notexist",
+      "password": "WrongPassword123!"
+    }
+  },
+  "products": {
+    "first": "Samsung galaxy s6",
+    "second": "Nokia lumia 1520"
+  }
+} 

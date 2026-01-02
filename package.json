@@ -1,0 +1,35 @@
+{
+  "name": "examen-qa-demoblaze",
+  "version": "1.0.0",
+  "description": "Examen práctico de QA - Automatización con Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:headed": "cypress run --headed",
+    "test:e2e": "cypress run --spec 'cypress/e2e/purchase-flow.cy.js'",
+    "test:api": "cypress run --spec 'cypress/e2e/api-tests.cy.js'",
+    "test:chrome": "cypress run --browser chrome",
+    "test:chrome:headed": "cypress run --browser chrome --headed",
+    "test:firefox": "cypress run --browser firefox",
+    "test:edge": "cypress run --browser edge",
+    "open": "cypress open",
+    "verify": "cypress verify",
+    "report:merge": "mochawesome-merge cypress/reports/*.json > cypress/reports/merged-report.json",
+    "report:generate": "marge cypress/reports/merged-report.json --reportDir cypress/reports/html --inline",
+    "report:full": "npm run test && npm run report:merge && npm run report:generate"
+  },
+  "keywords": [
+    "cypress",
+    "qa",
+    "automation",
+    "testing"
+  ],
+  "author": "Carlos Meneses",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.17.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.3.2"
+  }
+}
