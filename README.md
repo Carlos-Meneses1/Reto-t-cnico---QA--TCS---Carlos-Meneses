@@ -1,4 +1,4 @@
-# EXAMEN PRÁCTICO DE QA - AUTOMATIZACIÓN CON CYPRESS
+# PRUEBA TECNICA PARA QA - AUTOMATIZACIÓN CON CYPRESS
 
 Pruebas E2E y API para https://www.demoblaze.com/
 
@@ -78,6 +78,8 @@ npx cypress verify
 
 ## INSTRUCCIONES DE EJECUCIÓN:
 
+RECOMENDACION: EJECUTAR PASO 1 - PASO 2 Y PASO 7
+
 ### OPCIÓN 1: EJECUTAR TODAS LAS PRUEBAS (Modo Headless)
 
 Este modo ejecuta todas las pruebas en segundo plano sin abrir el navegador.
@@ -141,9 +143,10 @@ npm run test:api
 
 ---
 
-### OPCIÓN 5: ABRIR CYPRESS EN MODO INTERACTIVO (Recomendado para desarrollo)
+### OPCIÓN 5: ABRIR CYPRESS EN MODO INTERACTIVO 
 
-Este es el modo más visual e interactivo de Cypress.
+Este es el modo más visual e interactivo de Cypres pero no se recomienda tanto para que usuarios externos corran los test
+porque suele dar errores relacionados con cache por eso es recomendado mas para desarrolladores.
 
 **Comando:**
 ```bash
@@ -257,6 +260,13 @@ Test Cases incluidos:
 ### Problema: Las pruebas E2E fallan porque los productos no se encuentran
 **Solución:** El sitio puede haber cambiado. Verificar que los productos "Samsung galaxy s6" y "Nokia lumia 1520" existen en demoblaze.com
 
+### Problema: PASO 5 [10024:0101/190119.880:ERROR:bad_message.cc(29)] Terminating renderer for bad IPC message, reason 114
+1. Ejecutar: `npx cypress verify`
+2. Copiar y Abrir la direccion en una carpeta que nos da en la verificacion: ✔  Verified Cypress! ---> C:\Users\pc\AppData\Local\Cypress\Cache\13.17.0\Cypress 
+3. Borrar todo el contenido de la carpeta
+4. Eliminar la carpeta de node_modules del proyecto
+5. Instalar desde el inicio
+### Problema: Correr el comando npm run open no se abre en algunas computadoras por cache o compatibilidad de la misma
 ---
 
 ## NOTAS IMPORTANTES:
@@ -283,12 +293,12 @@ Test Cases incluidos:
 ```bash
 npm install              # Instalar dependencias
 npm test                 # Ejecutar todas las pruebas
-npm run open             # Abrir Cypress (interactivo)
+npm run test:headed      # Abrir Cypress en el navegador para ver visualmente el proceso
 npm run test:e2e         # Solo pruebas E2E
 npm run test:api         # Solo pruebas API
 npm run report:full      # Generar reporte HTML
 ```
 
-================================================================================
+==========================================
 FIN DE LAS INSTRUCCIONES
-================================================================================
+==========================================
