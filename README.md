@@ -79,11 +79,15 @@ npx cypress verify
 ## INSTRUCCIONES DE EJECUCIÓN:
 
 
-### Video de Ejecución de los Tests
+### Video de Ejecución de Tests
 
-[▶️ Ver video de demostración (con audio explicativo)](./Como-realizar-losTEST.mp4)
+## DEMOSTRACIÓN
 
-> **Nota:** Descarga el video para ver la demostración completa con explicación de la ejecución de los tests.
+Haz clic en el enlace para ver la demostración completa:
+
+**[▶️ Ver video completo](https://drive.google.com/file/d/1UYhddJasKmWi9GFlnFQ87aBhpGPWi1cB/view?usp=drive_link)**
+
+> **Nota:** Este video estará disponible hasta su revisión.
 
 RECOMENDACION: EJECUTAR PASO 1 - PASO 2 Y PASO 7
 
