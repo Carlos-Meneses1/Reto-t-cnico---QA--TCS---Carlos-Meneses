@@ -81,7 +81,7 @@ npx cypress verify
 
 ### Video de Demostración y Ejecución de Tests
 
-[▶️ Ver video de demostración](https://github.com/Carlos-Meneses1/Reto-tecnico-QA-TCS-Carlos-Meneses/blob/main/Como-realizar-losTEST.mp4)
+[▶️ Ver video de demostración](https://github.com/Carlos-Meneses1/Reto-tecnico-QA-TCS-Carlos-Meneses1/blob/main/Como-realizar-losTEST.mp4)
 
 RECOMENDACION: EJECUTAR PASO 1 - PASO 2 Y PASO 7
 
