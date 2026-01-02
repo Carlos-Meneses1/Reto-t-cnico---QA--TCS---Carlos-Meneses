@@ -85,9 +85,9 @@ npx cypress verify
 
 Haz clic en el enlace para ver la demostración completa:
 
-**[▶️ Ver video completo](https://drive.google.com/file/d/1UYhddJasKmWi9GFlnFQ87aBhpGPWi1cB/view?usp=drive_link)**
+**[▶️ Ver video completo](https://drive.google.com/file/d/1_3igMcFF6k_yQWMA5uQoCaXYEN2uGvlW/view?usp=drive_link**
 
-> **Nota:** Este video estará disponible hasta su revisión.
+> **Nota:** Este video es privado y estará disponible hasta su revisión.
 
 RECOMENDACION: EJECUTAR PASO 1 - PASO 2 Y PASO 7
 
